@@ -172,7 +172,8 @@ docs_server/
 ├── build/                  # gerado por npm run build (não versionado)
 ├── package.json            # scripts raiz: dev, build, start
 ├── README.md
-├── NETWORK.md              # dicas de acesso na rede (firewall, mesma Wi‑Fi)
+├── LICENSE                 # GPL-3.0
+├── NETWORK.md               # dicas de acesso na rede (firewall, mesma Wi‑Fi)
 └── .gitignore
 ```
 
@@ -229,4 +230,4 @@ O projeto não exige arquivo `.env` para rodar. Se no futuro você usar variáve
 
 ## Licença
 
-Este repositório é fornecido como está. Consulte o repositório para informações de licença, se houver.
+Este projeto está sob a licença **GNU General Public License v3.0 (GPL-3.0)**. Veja o arquivo [LICENSE](./LICENSE) para o texto completo.
