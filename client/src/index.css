@@ -1,0 +1,62 @@
+@import "highlight.js/styles/github-dark.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html.dark .prose pre code.hljs {
+  background: transparent;
+}
+
+/* Títulos sem link e sem underline */
+.prose h1 a,
+.prose h2 a,
+.prose h3 a,
+.prose h4 a,
+.prose h5 a,
+.prose h6 a {
+  text-decoration: none;
+  color: inherit;
+  pointer-events: none;
+}
+
+/* Código inline (entre backticks) visível */
+.prose :not(pre) > code {
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  background: rgb(243 244 246);
+  color: rgb(24 24 27);
+}
+html.dark .prose :not(pre) > code {
+  background: rgb(39 39 42);
+  color: rgb(244 244 245);
+}
+
+/* Swatch de cor hex: fundo na cor + texto com contraste */
+.prose .prose-hex-swatch {
+  padding: 0.2em 0.5em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-weight: 500;
+}
+
+/* Task list: checkboxes clicáveis e alinhados */
+.prose ul.contains-task-list {
+  list-style: none;
+  padding-left: 0;
+}
+.prose .task-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.prose .task-list-item-checkbox {
+  margin-top: 0.35em;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.prose .task-list-item .task-list-item-checkbox:disabled {
+  cursor: default;
+}

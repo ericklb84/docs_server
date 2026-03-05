@@ -1,0 +1,25 @@
+{
+  "name": "docs-server-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "build:no-check": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js",
+    "build:standalone": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=../build/index.js",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.9.0",
+    "esbuild": "^0.24.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
